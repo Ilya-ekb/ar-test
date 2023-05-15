@@ -30,11 +30,11 @@ export function EngineViewer(){
     <div className="engine">
       {isLoaded === false ?
         <div className="loading-overlay" style={{zIndex: 4}}>
-          <p>Loading... ({loadingPercentage}%)</p>
+          <p>Загрузка... ({loadingPercentage}%)</p>
         </div> : ""
       }
 
-      <Unity unityProvider={unityProvider} style={{width: "100%", height: "100vh", zIndex: 3, position: "relative"}}/>
+      <Unity unityProvider={unityProvider} style={{width: "100%", height: "100%", zIndex: 3, position: "relative"}}/>
       {isOnboarding ? <Onboarding isActive={isOnboarding}/> : ""}
       {isOnboarding ? "" : <MindARViewThree callback={function(objectName, methodName, parameter){sendMessage(objectName, methodName, parameter)}}/>}
     </div>

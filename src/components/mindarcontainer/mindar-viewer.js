@@ -9,7 +9,7 @@ export function MindARViewThree(props) {
   useEffect(() => {
     const mindarThree = new MindARThree({
       container: containerRef.current,
-      imageTargetSrc: "https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.2.0/examples/image-tracking/assets/card-example/card.mind"
+      imageTargetSrc: "./streamingassets/targets.mind"
     });
     const {renderer, scene, camera} = mindarThree;
     const anchor = mindarThree.addAnchor(0);
@@ -30,7 +30,6 @@ export function MindARViewThree(props) {
       renderer.render(scene, camera);
       if(tracked){
         let param = JSON.stringify(anchor.group.matrix);
-        console.log(anchor.group.matrix);
         props.callback("[EntryPoint]", "WebGlBridgeSetMatrix", param);
       }
     });
@@ -40,7 +39,7 @@ export function MindARViewThree(props) {
   }, []);
 
   return (
-    <div className='mindar' style={{width: "100%", height: "100%", zIndex: 0}} ref={containerRef}>
+    <div className='mi' style={{width: "100%", height: "100%", zIndex: 0}} ref={containerRef}>
     </div>
   )
 }
