@@ -5,10 +5,10 @@ import {MindARViewThree} from "../mindarcontainer/mindar-viewer"
 
 export function EngineViewer(){
   const {unityProvider, addEventListener, removeEventListener, sendMessage, loadingProgression, isLoaded} = useUnityContext({
-    loaderUrl: "/build/ARAlbum.loader.js",
-    dataUrl: "/build/ARAlbum.data",
-    frameworkUrl: "/build/ARAlbum.framework.js",
-    codeUrl: "/build/ARAlbum.wasm",
+    loaderUrl: "./engine/ARAlbum.loader.js",
+    dataUrl: "./engine/ARAlbum.data",
+    frameworkUrl: "./engine/ARAlbum.framework.js",
+    codeUrl: "./engine/ARAlbum.wasm",
     streamingAssetsUrl: "streamingassets",
   });
 
