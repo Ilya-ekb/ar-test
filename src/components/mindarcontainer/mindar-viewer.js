@@ -9,7 +9,7 @@ export function MindARViewThree(props) {
   useEffect(() => {
     const mindarThree = new MindARThree({
       container: containerRef.current,
-      imageTargetSrc: "./streamingassets/targets.mind"
+      imageTargetSrc: "./streamingassets/targets.mind",
     });
     const {renderer, scene, camera} = mindarThree;
     const anchor = mindarThree.addAnchor(0);

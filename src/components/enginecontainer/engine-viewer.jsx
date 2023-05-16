@@ -29,14 +29,14 @@ export function EngineViewer(){
   return (
     <div className="engine">
       {isLoaded === false ?
-        <div className="loading-overlay" style={{zIndex: 4}}>
-          <p>Загрузка... ({loadingPercentage}%)</p>
+        <div className="loading-overlay" style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%", background: "whitesmoke", display: "flex", zIndex: 4}}>
+          <p>ЗАГРУЗКА... {loadingPercentage}%</p>
         </div> : ""
       }
 
-      <Unity unityProvider={unityProvider} style={{width: "100%", height: "100%", zIndex: 3, position: "relative"}}/>
-      {isOnboarding ? <Onboarding isActive={isOnboarding}/> : ""}
       {isOnboarding ? "" : <MindARViewThree callback={function(objectName, methodName, parameter){sendMessage(objectName, methodName, parameter)}}/>}
+      <Unity unityProvider={unityProvider} style={{width: "100vw", height: "100vh", overflow: "hidden", zIndex: 3}}/>
+      {isOnboarding ? <Onboarding isActive={isOnboarding}/> : ""}
     </div>
   );
 }
