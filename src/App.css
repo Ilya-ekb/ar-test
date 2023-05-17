@@ -8,10 +8,6 @@ html, body {
   overflow: hidden;
 }
 
-.engine > .mindar{
-  overflow: hidden;
-}
-
 .engine > .loading-overlay {
   display: flex;
   justify-content: center;

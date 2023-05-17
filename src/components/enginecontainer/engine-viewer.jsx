@@ -14,6 +14,7 @@ export function EngineViewer(){
 
   const [isOnboarding, setOnboarding] = useState(true);
   const loadingPercentage = Math.round(loadingProgression * 100);
+  const [isNeedAr, setNeedAr] = useState(false);
 
   const handleStartEngine = useCallback(()=>{
     setOnboarding(false);
@@ -34,8 +35,8 @@ export function EngineViewer(){
         </div> : ""
       }
 
-      {isOnboarding ? "" : <MindARViewThree callback={function(objectName, methodName, parameter){sendMessage(objectName, methodName, parameter)}}/>}
-      <Unity unityProvider={unityProvider} style={{width: "100vw", height: "100vh", overflow: "hidden", zIndex: 3}}/>
+      <Unity unityProvider={unityProvider} style={{position: "static", width: "100vw", height: "93vh", overflow: "hidden", zIndex: 3}}/>
+      {isOnboarding ? "" : <MindARViewThree callback={function(objectName, methodName, parameter){sendMessage(objectName, methodName, parameter)}} addListener={function(methodName, handler) {addEventListener(methodName, handler)}} removeLister={function(methodName, handler) {removeEventListener(methodName, handler)}}/> }
       {isOnboarding ? <Onboarding isActive={isOnboarding}/> : ""}
     </div>
   );
