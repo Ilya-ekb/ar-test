@@ -2581,7 +2581,7 @@ function unityFramework(Module) {
             audio: false,
             video: videoInputDevices[deviceId].deviceId ? {deviceId: {exact: videoInputDevices[deviceId].deviceId}} : true
         }).then(function (stream) {
-            console.log("deviceID"+deviceId);
+            console.log("deviceID "+deviceId);
             var video = document.createElement("video");
             video.srcObject = stream;
             if (/(iPhone|iPad|iPod)/.test(navigator.userAgent)) {
