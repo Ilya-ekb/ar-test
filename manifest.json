@@ -8,7 +8,7 @@
       "type": "image/x-icon"
     }
   ],
-  "start_url": "./ar-test/",
+  "start_url": "/ar-test/",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
