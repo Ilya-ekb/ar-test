@@ -2586,13 +2586,13 @@ function unityFramework(Module) {
             video.srcObject = stream;
             if (/(iPhone|iPad|iPod)/.test(navigator.userAgent)) {
                 warnOnce("Applying iOS Safari specific workaround to video playback: https://bugs.webkit.org/show_bug.cgi?id=217578");
-                video.setAttribute("playsinline", "")
+                video.setAttribute("playsinline", true)
             }
             video.play();
             var canvas = document.createElement("canvas");
             activeWebCams[deviceId] = {
                 video: video,
-                canvas: document.createElement("canvas"),
+                canvas: canvas,
                 stream: stream,
                 frameLengthInMsecs: 1e3 / stream.getVideoTracks()[0].getSettings().frameRate,
                 nextFrameAvailableTime: 0,
