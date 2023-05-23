@@ -2582,7 +2582,7 @@ function unityFramework(Module) {
             video: videoInputDevices[deviceId].deviceId ? {deviceId: {exact: videoInputDevices[deviceId].deviceId}} : true
         }).then(function (stream) {
             console.log("deviceID "+deviceId);
-            var video = document.createElement("video");
+            var video = document.createElement("video1");
             video.srcObject = stream;
             if (/(iPhone|iPad|iPod)/.test(navigator.userAgent)) {
                 warnOnce("Applying iOS Safari specific workaround to video playback: https://bugs.webkit.org/show_bug.cgi?id=217578");
