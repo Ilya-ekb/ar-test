@@ -62,7 +62,7 @@ export function EngineViewer(props){
         </div> : ""
       }
       <Fragment>
-        <Unity unityProvider={unityProvider} style={{position: "static", width: "100vw", height: "93vh", overflow: "hidden", zIndex: 3}}/>
+        <Unity unityProvider={unityProvider} devicePixelRatio={window.devicePixelRatio} style={{position: "static", width: "100vw", height: "93vh", overflow: "hidden", zIndex: 3}}/>
         <button onClick={handleClickEventFullsrceen}>На весь экран</button>
       </Fragment>
       {isOnboarding ? "" : isCameraAllowed ? <MindARViewThree callback={function(objectName, methodName, parameter){sendMessage(objectName, methodName, parameter)}} addListener={function(methodName, handler) {addEventListener(methodName, handler)}} removeLister={function(methodName, handler) {removeEventListener(methodName, handler)}} video={srcVideo}/> : "" }
