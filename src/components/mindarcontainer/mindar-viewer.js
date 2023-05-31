@@ -2,11 +2,10 @@ import React, { useEffect, useRef, useCallback, useState } from 'react';
 import {MindARThree} from 'mind-ar/dist/mindar-image-three.prod.js';
 import * as THREE from 'three';
 
-let tracked = null;
+export let mindarThree = null;
 
 export function MindARViewThree(props) {
   const containerRef = useRef(null);
-  let mindarThree = null;
   useEffect(() => {
     mindarThree = new MindARThree({
       container: containerRef.current,
@@ -21,20 +20,15 @@ export function MindARViewThree(props) {
     const plane = new THREE.Mesh( geometry, material );
     
     anchor.onTargetFound = function(){
-      tracked = anchor;
-      props.callback("[EntryPoint]", "WebGlBridgeDetected", 0);
+      window.onDetected(anchor, 0);
     }
     anchor.onTargetLost = function(){
-      tracked = null;
-      props.callback("[EntryPoint]", "WebGlBridgeLost", 0);
+      window.onLost(anchor, 0);
     }
     anchor.group.add(plane);
     mindarThree.start();
     renderer.setAnimationLoop(() => {
-      if(tracked){
-        let param = JSON.stringify(anchor.group.matrix);
-        props.callback("[EntryPoint]", "WebGlBridgeSetMatrix", param);
-      }
+        window.onUpdate();
     });
 
     return () => {
