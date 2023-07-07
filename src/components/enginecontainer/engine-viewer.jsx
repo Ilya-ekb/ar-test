@@ -1,8 +1,7 @@
-import { useEffect, useCallback, useState, Fragment, useLayoutEffect } from "react";
+import { useEffect, useCallback, useState } from "react";
 import  { Unity, useUnityContext } from "react-unity-webgl";
 import { Onboarding } from "../onboarding/onboarding";
 import {MindARReact} from "../mindarcontainer/mindar-controller"
-import {au, ca, co, Controller, el, fa, fu, N, W } from "mind-ar/dist/controller-939e6d85";
 import { Popup } from "../popup/popup";
 import { AudioController } from "../audiocontrol/audiocontroller";
 

@@ -8,7 +8,7 @@
     "@testing-library/user-event": "^13.5.0",
     "aframe": "^1.4.2",
     "gh-pages": "^5.0.0",
-    "mind-ar": "^1.2.1",
+    "mind-ar": "^1.2.2",
     "or": "^0.2.0",
     "react": "^18.2.0",
     "react-audio-player": "^0.17.0",
@@ -16,6 +16,8 @@
     "react-popup": "^0.11.0",
     "react-scripts": "5.0.1",
     "react-unity-webgl": "^9.4.0",
+    "three": "^0.153.0",
+    "three-addons": "^1.2.0",
     "web-vitals": "^2.1.4",
     "with": "^7.0.2"
   },
@@ -43,5 +45,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "canvas": "^2.11.2"
   }
 }

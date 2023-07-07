@@ -1,0 +1,19 @@
+version: '2.1'
+
+networks:
+  default:
+
+services:
+
+  liveArt-front:
+    container_name: liveArt-front
+    image:  live-art-front:0.1
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "40m"
+        max-file: "5"
+    restart: always
+    ports:
+      - 3001:3000
+    entrypoint: ["./entrypoint.sh"]
