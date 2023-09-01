@@ -1,6 +1,5 @@
 <linker>
   <assembly fullname="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
-    <type fullname="CutoutMask" preserve="all" />
     <type fullname="GameLogic.ARTrackedImageManager" preserve="all" />
     <type fullname="MonoComponents.ArHUDComponent" preserve="all" />
     <type fullname="MonoComponents.ARSessionComponent" preserve="all" />
@@ -18,9 +17,10 @@
     <type fullname="MonoComponents.RangeUIComponent" preserve="all" />
     <type fullname="MonoComponents.SwipeComponent" preserve="all" />
     <type fullname="MonoComponents.SwipeHandler" preserve="all" />
-    <type fullname="MonoComponents.TimeBarComponent" preserve="all" />
     <type fullname="MonoComponents.ToggleComponent" preserve="all" />
     <type fullname="MonoComponents.WebCam" preserve="all" />
+    <type fullname="UI.TextComponent" preserve="all" />
+    <type fullname="UI.Views.TitleComponent" preserve="all" />
   </assembly>
   <assembly fullname="Assembly-CSharp-firstpass, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
     <type fullname="UI.FadeComponent" preserve="all" />
@@ -34,6 +34,7 @@
     <type fullname="UnityEngine.ResourceManagement.ResourceProviders.AssetBundleProvider" preserve="all" />
     <type fullname="UnityEngine.ResourceManagement.ResourceProviders.BundledAssetProvider" preserve="all" />
     <type fullname="UnityEngine.ResourceManagement.ResourceProviders.InstanceProvider" preserve="all" />
+    <type fullname="UnityEngine.ResourceManagement.ResourceProviders.LegacyResourcesProvider" preserve="all" />
     <type fullname="UnityEngine.ResourceManagement.ResourceProviders.SceneProvider" preserve="all" />
   </assembly>
   <assembly fullname="UnityEngine.AnimationModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
